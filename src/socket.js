@@ -2,6 +2,7 @@ import { Server } from "socket.io";
 
 let io;
 let message = [];
+let username;
 
 export const init = (httpServer)=>{
     io = new Server(httpServer);
