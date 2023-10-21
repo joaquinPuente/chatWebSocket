@@ -53,3 +53,18 @@ h1 {
     border-radius: 5px;
     margin-bottom: 5px;
 }
+
+@media (max-width: 768px) {
+    #input-message {
+        width: 100%; 
+    }
+
+    #form-message input[type="submit"] {
+        width: 100%; 
+        margin-top: 10px;
+    }
+
+    #log-message {
+        width: 100%; 
+    }
+}
