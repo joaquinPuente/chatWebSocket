@@ -56,6 +56,9 @@ h1 {
 @media (max-width: 768px) {
     body {
         background-image: url('/img/fondoVertical.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
     }
 
     #form-message input[type="submit"] {
@@ -64,6 +67,6 @@ h1 {
     }
 
     #log-message {
-        width: 100%; 
+        width: 90%;
     }
 }
