@@ -1,3 +1,14 @@
 <div>
-    ya estamos listos para iniciar el Chat
+    <h1>Websocket Chat</h1>
+    <form id="form-message">
+        <input id="input-message" type="text" required placeholder="Ingrese su mensaje">
+        <input type="submit" value="Enviar">
+    </form>
 </div>
+
+<div id="log-message">
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/index.js" ></script>
