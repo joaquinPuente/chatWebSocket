@@ -19,17 +19,25 @@
 
     })
 
-    function updateLogMessage(message){
-        logMessage.innerText='';
-        message.forEach((msg)=>{
+    function updateLogMessage(message) {
+        logMessage.innerText = '';
+        message.forEach((msg) => {
             const p = document.createElement('p');
-            p.innerHTML = `${msg.username}: ${msg.text}`
+            const timestamp = new Date(msg.timestamp);
+            const formattedTime = timestamp.toLocaleString();
+            p.innerHTML = `(${formattedTime}) - ${msg.username}: ${msg.text}`;
             logMessage.appendChild(p);
-        })
+        });
+    }
+
+    function scrollToBottom() {
+        const logMessage = document.getElementById('log-message');
+        logMessage.scrollTop = logMessage.scrollHeight;
     }
 
     socket.on('notification', ({message}) => {
         updateLogMessage(message);
+        scrollToBottom();
     })
 
     socket.on('new-client', (data) => {

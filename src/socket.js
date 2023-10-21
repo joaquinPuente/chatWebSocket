@@ -16,11 +16,13 @@ export const init = (httpServer)=>{
 
         socketClient.broadcast.emit('new-client', { username })
 
-        socketClient.on('new-message', (data)=>{
+        socketClient.on('new-message', (data) => {
             const { username, text } = data;
-            message.push({username,text});
-            io.emit('notification', {message})
-        })
+            const timestamp = new Date();
+            const messageData = { username, text, timestamp };
+            message.push(messageData);
+            io.emit('notification', { message });
+        });        
     
     })
 

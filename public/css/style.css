@@ -1,8 +1,8 @@
 body {
-    background-image: url('/img/fondo.jpg') ;
-    background-size: cover; 
-    background-repeat: no-repeat; 
-    background-attachment: fixed; 
+    background-image: url('/img/fondoHorizontal.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 div {
@@ -35,14 +35,13 @@ h1 {
     cursor: pointer;
 }
 
-
 #log-message {
     border: 1px solid #ccc;
     padding: 10px;
-    margin: 0 auto; 
+    margin: 0 auto;
     max-height: 300px;
     overflow-y: auto;
-    width: 70%; /* Limitar el ancho */
+    width: 70%;
 }
 
 #log-message p {
@@ -55,12 +54,12 @@ h1 {
 }
 
 @media (max-width: 768px) {
-    #input-message {
-        width: 100%; 
+    body {
+        background-image: url('/img/fondoVertical.jpg');
     }
 
     #form-message input[type="submit"] {
-        width: 100%; 
+        width: 100%;
         margin-top: 10px;
     }
 
