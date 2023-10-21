@@ -1,5 +1,5 @@
 body {
-    background-image: url('/public/img/fondo.jpg') ;
+    background-image: url('/img/fondo.jpg') ;
     background-size: cover; 
     background-repeat: no-repeat; 
     background-attachment: fixed; 
@@ -11,7 +11,7 @@ div {
 }
 
 h1 {
-    color: #333;
+    color: white;
     font-size: 24px;
 }
 
@@ -35,13 +35,6 @@ h1 {
     cursor: pointer;
 }
 
-#log-message {
-    border: 1px solid #ccc;
-    padding: 10px;
-    margin-top: 20px;
-    max-height: 300px;
-    overflow-y: auto;
-}
 
 #log-message {
     border: 1px solid #ccc;

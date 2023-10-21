@@ -49,7 +49,7 @@
             if(!value){
                 return 'Necesitamos que ingreses un username para continuar';
             }
-        }
+        },
     })
     .then((result) => {
         username = result.value.trim();
