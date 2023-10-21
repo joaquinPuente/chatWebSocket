@@ -32,12 +32,20 @@
         updateLogMessage(message);
     })
 
-    socket.on('new-client', () => {
-        Swal.fire({
-            text: 'Nuevo usuario conectado',
-            toast: true,
-            position: 'top-right',
-        });
+    socket.on('new-client', (data) => {
+        if (data.username) {
+            Swal.fire({
+                text: `Nuevo usuario conectado: ${data.username}`,
+                toast: true,
+                position: 'top-right',
+            });
+        } else {
+            Swal.fire({
+                text: 'Nuevo usuario conectado',
+                toast: true,
+                position: 'top-right',
+            });
+        }
     });
 
     Swal.fire({

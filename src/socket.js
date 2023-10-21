@@ -13,7 +13,7 @@ export const init = (httpServer)=>{
     
         socketClient.emit('notification', {message})
 
-        socketClient.broadcast.emit('new-client')
+        socketClient.broadcast.emit('new-client', { username })
 
         socketClient.on('new-message', (data)=>{
             const { username, text } = data;
